@@ -1,0 +1,83 @@
+// Queries
+@import "include-media.scss"
+// How to use:
+// @include media (">=phone" , "<=desktop")
+// 'phone': 375px,
+// 'tablet': 768px,
+// 'laptop': 992px,
+// 'desktop': 1250px,
+// 'LGdesktop': 1920px, 
+// ---> FONTS <---
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap')
+
+// ---> GLOBALS <---
+/* Fonts */
+$font-primary: 'Raleway', sans-serif
+$font-secondary: 'Cinzel', serif
+/* Colors */
+$color-dark-1: #111111
+$color-dark-2: #262626
+$color-dark-3: #333333
+$color-dark-4: #555555
+$color-light-1: #eeece6
+$color-light-2: #f2f1ed
+$color-light-3: #f7f6f3
+$color-light-4: #f1e9db
+$color-gray-1: #888888
+$color-gray-2: #cccccc
+/* Transitions */
+$main-trans: 0.3s linear all
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+html
+    font-size: 18px
+    -webkit-font-smoothing: antialiased
+    text-rendering: optimizeLegibility
+    -webkit-text-rendering: optimizeLegibility
+    -moz-osx-font-smoothing: grayscale
+    overflow-x: hidden
+
+body
+    position: relative
+    width: 100%
+    min-width: 320px
+    font-family: $font-primary
+    font-size: 100%
+    line-height: 2
+    color: $color-dark-2
+    word-wrap: break-word
+
+img, iframe
+    max-width: 100%
+    height: auto
+
+a
+    transition: all 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86)
+    text-decoration: none
+    color: $color-gray-1
+a:hover
+    color: $color-gray-2
+    text-decoration: none
+
+ul
+    list-style: none
+
+/* --------------------------------------------------- */
+/* --------------------- MAIN APP -------------------- */
+/* --------------------------------------------------- */
+
+/* ======================================================================== */
+/* 1.Cursor Follower */
+/* ======================================================================== */
+
+/* ======================================================================== */
+/* 2.Welcome Screen */
+/* ======================================================================== */
+
+/* ======================================================================== */
+/* 5.Homepage */
+/* ======================================================================== */
