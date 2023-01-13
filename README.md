@@ -1,1 +1,5 @@
-# BarmanWebsite-Frontend-
+# BarmanWebsite-Frontend
+
+### Dependencies:
+
+- Styled Components
