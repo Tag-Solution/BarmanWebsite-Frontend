@@ -1,13 +1,41 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 import homeBg1 from "../assets/static/homepage/homepageBg1.jpg";
 
 const Homepage = () => {
+	// Window Width:
+	const [windowDimensions, setWindowDimensions] = useState(
+		getWindowDimensions()
+	);
+	function getWindowDimensions() {
+		const { innerWidth: width, innerHeight: height } = window;
+		return {
+			width,
+			height,
+		};
+	}
+
+	useEffect(() => {
+		function handleResize() {
+			setWindowDimensions(getWindowDimensions());
+		}
+		window.addEventListener("resize", handleResize);
+		return () => window.removeEventListener("resize", handleResize);
+	}, []);
+
+	console.log(windowDimensions.height);
+
 	return (
 		<Wrapper>
-			<div className="home-sect">
+			<div
+				className="home-sect"
+				style={{
+					width: windowDimensions.width + "px",
+					height: windowDimensions.height + "px",
+				}}
+			>
 				{/* Background Image */}
 				<div className="home-bg">
 					<img src={homeBg1} alt="BarmanWebsite" />
@@ -33,8 +61,6 @@ const Homepage = () => {
 const Wrapper = styled.main`
 	.home-sect {
 		text-align: center;
-		width: 100vw;
-		height: 100vh;
 		position: relative;
 		top: 0;
 	}
