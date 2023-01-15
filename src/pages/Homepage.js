@@ -4,8 +4,12 @@ import styled from "styled-components";
 
 import homeBg1 from "../assets/static/homepage/homepageBg1.jpg";
 
-const Homepage = () => {
-	// Window Width:
+const Homepage = (props) => {
+	const { isFullScreen } = props;
+
+	/*
+	 * isFullScreen
+	 */
 	const [windowDimensions, setWindowDimensions] = useState(
 		getWindowDimensions()
 	);
@@ -25,16 +29,21 @@ const Homepage = () => {
 		return () => window.removeEventListener("resize", handleResize);
 	}, []);
 
-	console.log(windowDimensions.height);
-
 	return (
 		<Wrapper>
 			<div
 				className="home-sect"
-				style={{
-					width: windowDimensions.width + "px",
-					height: windowDimensions.height + "px",
-				}}
+				style={
+					isFullScreen
+						? {
+								width: windowDimensions.width + "px",
+								height: windowDimensions.height + "px",
+						  }
+						: {
+								width: "100vw",
+								height: "90vh",
+						  }
+				}
 			>
 				{/* Background Image */}
 				<div className="home-bg">
