@@ -114,7 +114,7 @@ const Wrapper = styled.main`
 		flex-direction: column;
 		align-items: center;
 		justify-content: space-between;
-		height: 14rem;
+		height: 13rem;
 		.home-info {
 			display: grid;
 			place-items: center;
@@ -139,8 +139,8 @@ const Wrapper = styled.main`
 				color: var(--ColorGold);
 			}
 			p {
-				font-size: 0.8rem;
-				letter-spacing: 1.5px;
+				font-size: 0.87rem;
+				letter-spacing: 0.12rem;
 				font-weight: 200;
 			}
 		}
