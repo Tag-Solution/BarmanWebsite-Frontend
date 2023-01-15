@@ -58,11 +58,12 @@ const Homepage = (props) => {
 					</div>
 					{/* Info */}
 					<div className="home-info-container">
-						<h4>Desde 1920</h4>
-						<h1>Welcome a Barman Website</h1>
-						<h2>Bar & Cocktails</h2>
-						<p>@instagram.barman</p>
-
+						<div className="home-info">
+							<h4>Desde 1920</h4>
+							<h1>Welcome a Barman Website</h1>
+							<h2>Bar & Cocktails</h2>
+							<p>@instagram.barman</p>
+						</div>
 						{/* Button */}
 						<Link to="/prueba-link-fallido" className="home-btn main-btn">
 							Ver Menu!
@@ -79,7 +80,6 @@ const Wrapper = styled.main`
 	.home-sect {
 		text-align: center;
 		position: relative;
-		top: 0;
 	}
 	.home-bg {
 		position: absolute;
@@ -109,41 +109,45 @@ const Wrapper = styled.main`
 		position: absolute;
 		top: 50%;
 		left: 50%;
+		transform: translate(-50%, -50%);
 		display: flex;
 		flex-direction: column;
-		justify-content: space-around;
-		height: 25%;
-		transform: translate(-50%, -50%);
-		color: var(--ColorWhite);
-		h4 {
-			text-transform: uppercase;
-			font-size: 0.75rem;
-			font-weight: 200;
-			letter-spacing: 3px;
-		}
-		h1 {
-			font-size: 1.6rem;
-			font-weight: 300;
-			white-space: nowrap;
-			letter-spacing: 2px;
-		}
-		h2 {
-			font-size: 1.7rem;
-			font-weight: 200;
-			letter-spacing: 5px;
-			color: var(--ColorGold);
-		}
-		p {
-			font-size: 0.8rem;
-			letter-spacing: 1.5px;
-			font-weight: 200;
+		align-items: center;
+		justify-content: space-between;
+		height: 14rem;
+		.home-info {
+			display: grid;
+			place-items: center;
+			height: 60%;
+			color: var(--ColorWhite);
+			h4 {
+				text-transform: uppercase;
+				font-size: 0.7rem;
+				font-weight: 200;
+				letter-spacing: 0.5rem;
+			}
+			h1 {
+				font-size: 1.5rem;
+				font-weight: 600;
+				white-space: nowrap;
+				letter-spacing: 0.13rem;
+			}
+			h2 {
+				font-size: 1.5rem;
+				font-weight: 300;
+				letter-spacing: 0.25rem;
+				color: var(--ColorGold);
+			}
+			p {
+				font-size: 0.8rem;
+				letter-spacing: 1.5px;
+				font-weight: 200;
+			}
 		}
 		.home-btn {
 			font-size: 1.5rem;
 			font-weight: 200;
 			letter-spacing: 2px;
-			margin-top: 2rem;
-			align-self: center;
 			width: 45vw;
 		}
 	}
