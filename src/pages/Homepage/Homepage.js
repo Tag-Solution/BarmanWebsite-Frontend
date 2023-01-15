@@ -39,7 +39,7 @@ const Homepage = (props) => {
 		}
 		return {
 			width: windowDimensions.width,
-			height: windowDimensions.height * 0.9 + "px",
+			height: windowDimensions.height * 0.942 + "px",
 		};
 	};
 
