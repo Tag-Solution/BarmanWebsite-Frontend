@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-import homeBg1 from "../assets/static/homepage/homepageBg1.jpg";
+import homeBg1 from "../../assets/static/homepage/homepageBg1.jpg";
+import { DummyPage } from "../../pages";
 
 const Homepage = (props) => {
 	const { isFullScreen } = props;
@@ -29,41 +30,48 @@ const Homepage = (props) => {
 		return () => window.removeEventListener("resize", handleResize);
 	}, []);
 
-	return (
-		<Wrapper>
-			<div
-				className="home-sect"
-				style={
-					isFullScreen
-						? {
-								width: windowDimensions.width + "px",
-								height: windowDimensions.height + "px",
-						  }
-						: {
-								width: "100vw",
-								height: "90vh",
-						  }
-				}
-			>
-				{/* Background Image */}
-				<div className="home-bg">
-					<img src={homeBg1} alt="BarmanWebsite" />
-					<div className="home-bg-overlay"></div>
-				</div>
-				{/* Info */}
-				<div className="home-info-container">
-					<h4>Desde 1920</h4>
-					<h1>Welcome a Barman Website</h1>
-					<h2>Bar & Cocktails</h2>
-					<p>@instagram.barman</p>
+	const handleFullScreen = (isFullScreen) => {
+		if (isFullScreen) {
+			return {
+				width: windowDimensions.width + "px",
+				height: windowDimensions.height + "px",
+			};
+		}
+		return {
+			width: "100vw",
+			height: "90vh",
+		};
+	};
 
-					{/* Button */}
-					<Link to="/prueba-link-fallido" className="home-btn main-btn">
-						Ver Menu!
-					</Link>
+	/*
+	 * Other
+	 */
+
+	return (
+		<React.Fragment>
+			<Wrapper>
+				<div className="home-sect" style={handleFullScreen(isFullScreen)}>
+					{/* Background Image */}
+					<div className="home-bg">
+						<img src={homeBg1} alt="BarmanWebsite" />
+						<div className="home-bg-overlay"></div>
+					</div>
+					{/* Info */}
+					<div className="home-info-container">
+						<h4>Desde 1920</h4>
+						<h1>Welcome a Barman Website</h1>
+						<h2>Bar & Cocktails</h2>
+						<p>@instagram.barman</p>
+
+						{/* Button */}
+						<Link to="/prueba-link-fallido" className="home-btn main-btn">
+							Ver Menu!
+						</Link>
+					</div>
 				</div>
-			</div>
-		</Wrapper>
+			</Wrapper>
+			{!isFullScreen && <DummyPage></DummyPage>}
+		</React.Fragment>
 	);
 };
 
