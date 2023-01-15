@@ -120,35 +120,37 @@ const Wrapper = styled.main`
 			place-items: center;
 			height: 60%;
 			color: var(--ColorWhite);
+			font-family: var(--FontTitles);
 			h4 {
 				text-transform: uppercase;
 				font-size: 0.7rem;
-				font-weight: 200;
+				font-weight: 100;
 				letter-spacing: 0.5rem;
 			}
 			h1 {
-				font-size: 1.5rem;
-				font-weight: 600;
+				font-size: 1.77rem;
+				font-weight: 400;
 				white-space: nowrap;
-				letter-spacing: 0.13rem;
+				letter-spacing: 0.1rem;
 			}
 			h2 {
-				font-size: 1.5rem;
+				font-size: 1.7rem;
 				font-weight: 300;
 				letter-spacing: 0.25rem;
 				color: var(--ColorGold);
 			}
 			p {
-				font-size: 0.87rem;
-				letter-spacing: 0.12rem;
+				font-size: 0.75rem;
+				letter-spacing: 0.07rem;
 				font-weight: 200;
+				font-family: var(--FontTexts);
 			}
 		}
 		.home-btn {
 			font-size: 1.5rem;
 			font-weight: 200;
-			letter-spacing: 2px;
-			width: 45vw;
+			letter-spacing: 0.2rem;
+			padding: 0.4rem 2.2rem;
 		}
 	}
 `;
