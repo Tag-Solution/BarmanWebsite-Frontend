@@ -38,8 +38,8 @@ const Homepage = (props) => {
 			};
 		}
 		return {
-			width: "100vw",
-			height: "90vh",
+			width: windowDimensions.width,
+			height: windowDimensions.height * 0.9 + "px",
 		};
 	};
 
