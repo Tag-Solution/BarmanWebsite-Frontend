@@ -48,7 +48,7 @@ const Homepage = (props) => {
 	 */
 
 	return (
-		<React.Fragment>
+		<>
 			<Wrapper>
 				<div className="home-sect" style={handleFullScreen(isFullScreen)}>
 					{/* Background Image */}
@@ -72,7 +72,7 @@ const Homepage = (props) => {
 				</div>
 			</Wrapper>
 			{!isFullScreen && <DummyPage></DummyPage>}
-		</React.Fragment>
+		</>
 	);
 };
 
@@ -101,7 +101,7 @@ const Wrapper = styled.main`
 			left: 0;
 			width: 100%;
 			height: 100%;
-			background-color: rgba(0, 0, 0, 0.68);
+			background-color: rgba(0, 0, 0, 0.72);
 		}
 	}
 	.home-info-container {
@@ -151,6 +151,46 @@ const Wrapper = styled.main`
 			font-weight: 200;
 			letter-spacing: 0.2rem;
 			padding: 0.4rem 2.2rem;
+		}
+	}
+
+	@media (min-width: 480px) {
+		.home-info-container {
+			.home-info {
+				h1 {
+					color: red;
+				}
+			}
+		}
+	}
+
+	@media (min-width: 768px) {
+		.home-info-container {
+			.home-info {
+				h1 {
+					color: cyan;
+				}
+			}
+		}
+	}
+
+	@media (min-width: 1024px) {
+		.home-info-container {
+			.home-info {
+				h1 {
+					color: yellow;
+				}
+			}
+		}
+	}
+
+	@media (min-width: 1200px) {
+		.home-info-container {
+			.home-info {
+				h1 {
+					color: magenta;
+				}
+			}
 		}
 	}
 `;
