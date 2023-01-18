@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import styled from "styled-components";
+import axios from "axios";
 
+import styled from "styled-components";
 import homeBg1 from "../../assets/static/homepage/homepageBg1.jpg";
+
 import { DummyPage } from "../../pages";
 
 const Homepage = (props) => {
@@ -44,8 +46,15 @@ const Homepage = (props) => {
 	};
 
 	/*
-	 * Other
+	 * Test Connect
 	 */
+
+	useEffect(() => {
+		axios
+			.get("https://barmanwebsite.herokuapp.com/api/v1/button/all")
+			.then((res) => console.log(res.data))
+			.catch((e) => console.log(e));
+	}, []);
 
 	return (
 		<>
