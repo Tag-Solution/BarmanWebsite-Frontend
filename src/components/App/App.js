@@ -7,7 +7,10 @@ const App = () => {
 	return (
 		<BrowserRouter basename="/BarmanWebsite-Frontend">
 			<Routes>
-				<Route path="/" element={<Homepage></Homepage>}></Route>
+				<Route
+					path="/"
+					element={<Homepage isFullScreen={false}></Homepage>}
+				></Route>
 				<Route path="*" element={<Error></Error>}></Route>
 			</Routes>
 		</BrowserRouter>
