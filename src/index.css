@@ -14,7 +14,7 @@
 :root {
 	/* Colors */
 	--ColorBlack: #000000;
-	--ColorWhite: #ffffff;
+	--ColorWhite: #f7f7f7;
 	--ColorBlack-1: #030303;
 	--ColorBlack-85: rgba(3, 3, 3, 0.85);
 	--ColorBlack-7: rgba(3, 3, 3, 0.7);
@@ -22,7 +22,7 @@
 	--ColorBlack-35: rgba(3, 3, 3, 0.35);
 	--ColorBlack-2: rgba(3, 3, 3, 0.2);
 	--ColorBlackHover: #0c0c0c;
-	--ColorGold: #c19d60;
+	--ColorGold: #ba8d3e;
 	--ColorGoldService: #ebebeb;
 	--ColorGoldLight: #fafafa;
 	--ColorGoldLight-7: #fafafaab;
@@ -78,7 +78,7 @@ hr {
 }
 .main-btn:hover {
 	background: var(--ColorGold);
-	border: 1px solid var(--ColorWhite);
+	border: 1px solid var(--ColorGold);
 }
 
 /* ======================================================================== */
