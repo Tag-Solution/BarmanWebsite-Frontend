@@ -12,7 +12,7 @@ const Error = () => {
 			<OverlayImage
 				imgSrc={ErrorImg}
 				imgAlt="Page Not Found"
-				overlayOpacity={0.35}
+				overlayOpacity={0.45}
 			></OverlayImage>
 			<OverlayText
 				h1Text="404"
@@ -21,7 +21,6 @@ const Error = () => {
 				redirectText="Return to Homepage"
 				redirectPath="/"
 			></OverlayText>
-			<Link to="/">Volver al Home</Link>
 		</div>
 	);
 };
