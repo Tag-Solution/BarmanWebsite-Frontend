@@ -22,8 +22,6 @@ const PageHeader = ({ imgSrc, imgAlt, h2Text, h3Text, pText }) => {
 	);
 };
 
-const Wrapper = styled.main`
-	height: 75vh;
-`;
+const Wrapper = styled.main``;
 
 export default PageHeader;
