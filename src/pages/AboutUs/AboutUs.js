@@ -64,6 +64,7 @@ const Wrapper = styled.main`
 		font-size: 0.87rem;
 		font-weight: 300;
 		text-align: left;
+		line-height: 1.45rem;
 	}
 	.divider {
 		height: 1.5rem;
