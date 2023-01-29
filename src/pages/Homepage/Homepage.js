@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 import { useHomepageContext } from "../../context/HomepageContext";
 
-import { DummyPage } from "../../pages";
+import { DummyPage, Preloader } from "../../pages";
 
 const Homepage = (props) => {
 	const { isFullScreen } = props;
@@ -52,11 +52,7 @@ const Homepage = (props) => {
 		homepage;
 
 	if (homepage_loading) {
-		return (
-			<div>
-				<h2>Cargando...</h2>
-			</div>
-		);
+		return <Preloader></Preloader>;
 	}
 	if (homepage_error) {
 		return (
