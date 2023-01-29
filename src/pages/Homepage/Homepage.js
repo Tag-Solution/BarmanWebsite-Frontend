@@ -40,7 +40,7 @@ const Homepage = (props) => {
 			};
 		}
 		return {
-			width: windowDimensions.width,
+			width: windowDimensions.width + "px",
 			height: windowDimensions.height * 0.942 + "px",
 		};
 	};
