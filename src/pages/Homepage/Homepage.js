@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { OverlayImage } from "../../components/OverlayImage";
 import useWindowDimensions from "../../components/Utils/useWindowDimensions";
 
 import { useHomepageContext } from "../../context/HomepageContext";
@@ -46,13 +47,11 @@ const Homepage = ({ isFullScreen }) => {
 			<Wrapper>
 				<div className="home-sect" style={handleFullScreen(isFullScreen)}>
 					{/* Background Image */}
-					<div className="home-bg">
-						<img
-							src={imageResponses?.[0]?.fileUrl}
-							alt={imageResponses?.[0]?.name}
-						/>
-						<div className="home-bg-overlay"></div>
-					</div>
+					<OverlayImage
+						imgSrc={imageResponses?.[0]?.fileUrl}
+						imgAlt={imageResponses?.[0]?.name}
+						overlayOpacity={0.6}
+					></OverlayImage>
 					{/* Info */}
 					<div className="home-info-container">
 						<div className="home-info">
@@ -78,29 +77,6 @@ const Wrapper = styled.main`
 	.home-sect {
 		text-align: center;
 		position: relative;
-	}
-	.home-bg {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-color: var(--ColorBlack-85);
-		img {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-			object-position: center center;
-		}
-		.home-bg-overlay {
-			z-index: 1;
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background-color: rgba(0, 0, 0, 0.775);
-		}
 	}
 	.home-info-container {
 		z-index: 2;
