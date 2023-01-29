@@ -86,7 +86,7 @@ const Wrapper = styled.main`
 		}
 	}
 	.img-container {
-		max-width: 85%;
+		max-width: 95%;
 		margin: 0 auto;
 		height: 22rem;
 		display: flex;
