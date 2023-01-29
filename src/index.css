@@ -65,6 +65,37 @@ hr {
 	border: none;
 	border-top: 1px solid var(--ColorFooterDivider);
 }
+/* Sections */
+/* Sections */
+.section {
+	height: 100%;
+	padding: 3.5rem 0rem;
+	background: var(--ColorWhite);
+}
+.section-center {
+	width: 85%;
+	margin: 0 auto;
+	display: block;
+}
+.section-title {
+	text-align: left;
+	padding-bottom: 3rem;
+}
+.section-title span {
+	text-transform: uppercase;
+	margin-left: 0.2rem;
+	font-size: 0.7rem;
+	font-weight: 300;
+	letter-spacing: 0.5rem;
+	color: var(--ColorGold);
+}
+.section-title h2 {
+	margin-top: 0.5rem;
+	font-family: var(--FontTexts);
+	font-weight: 300;
+	font-size: 1.9rem;
+	color: var(--ColorCrimson);
+}
 
 /* Classes */
 .main-btn {
