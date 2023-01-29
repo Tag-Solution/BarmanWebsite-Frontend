@@ -69,7 +69,7 @@ hr {
 /* Sections */
 .section {
 	height: 100%;
-	padding: 3.5rem 0rem;
+	padding: 5rem 0rem;
 	background: var(--ColorWhite);
 }
 .section-center {
@@ -79,7 +79,7 @@ hr {
 }
 .section-title {
 	text-align: left;
-	padding-bottom: 3rem;
+	padding-bottom: 3.7rem;
 }
 .section-title span {
 	text-transform: uppercase;

@@ -8,25 +8,11 @@ import useWindowDimensions from "../../components/Utils/useWindowDimensions";
 
 import { OverlayImage } from "../../components/Overlays";
 
-import { DummyPage, Preloader } from "../../pages";
+import { AboutUs, DummyPage, Preloader } from "../../pages";
 
-const Homepage = ({ isFullScreen }) => {
+const Homepage = () => {
 	const { width, height } = useWindowDimensions();
 	const { homepage, homepage_loading, homepage_error } = useHomepageContext();
-
-	const handleFullScreen = (isFullScreen) => {
-		if (isFullScreen) {
-			return {
-				width: width,
-				height: height,
-			};
-		} else {
-			return {
-				width: "100%",
-				height: "95vh",
-			};
-		}
-	};
 
 	/*
 	 * Render
@@ -47,7 +33,7 @@ const Homepage = ({ isFullScreen }) => {
 	return (
 		<>
 			<Wrapper>
-				<div className="home-sect" style={handleFullScreen(isFullScreen)}>
+				<div className="home-sect" style={{ width: "100%", height: "95vh" }}>
 					{/* Background Image */}
 					<OverlayImage
 						imgSrc={imageResponses?.[0]?.fileUrl}
@@ -69,7 +55,10 @@ const Homepage = ({ isFullScreen }) => {
 					</div>
 				</div>
 			</Wrapper>
-			{!isFullScreen && <DummyPage></DummyPage>}
+			{/* ============= */}
+			{/* Otras Paginas */}
+			{/* ============= */}
+			<AboutUs isSectionOnly={true}></AboutUs>
 		</>
 	);
 };

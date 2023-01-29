@@ -5,16 +5,18 @@ import { PageHeader } from "../../components/PageHeader";
 
 import AboutUsBG from "../../assets/temp/AboutUsBG.jpg";
 
-const AboutUs = () => {
+const AboutUs = ({ isSectionOnly }) => {
 	return (
 		<Wrapper>
-			<PageHeader
-				imgSrc={AboutUsBG}
-				imgAlt={"About Us Page"}
-				h2Text={"About Us"}
-				h3Text={"Nyu's Bartending"}
-				pText={"History"}
-			></PageHeader>
+			{isSectionOnly ? null : (
+				<PageHeader
+					imgSrc={AboutUsBG}
+					imgAlt={"About Us Page"}
+					h2Text={"About Us"}
+					h3Text={"Nyu's Bartending"}
+					pText={"History"}
+				></PageHeader>
+			)}
 			<div className="section">
 				<div className="section-center">
 					<div className="section-title">
