@@ -86,7 +86,8 @@ const Wrapper = styled.main`
 		}
 	}
 	.img-container {
-		max-width: 17rem;
+		max-width: 85%;
+		margin: 0 auto;
 		height: 22rem;
 		display: flex;
 		align-items: center;
