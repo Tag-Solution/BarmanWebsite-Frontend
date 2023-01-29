@@ -5,8 +5,7 @@ import PreloaderImg from "../../assets/PreloaderImg.jpg";
 
 import useWindowDimensions from "../../components/Utils/useWindowDimensions";
 
-import { OverlayImage } from "../../components/OverlayImage";
-import { OverlayText } from "../../components/OverlayText";
+import { OverlayImage, OverlayText } from "../../components/Overlays";
 
 const Preloader = () => {
 	const { width, height } = useWindowDimensions();

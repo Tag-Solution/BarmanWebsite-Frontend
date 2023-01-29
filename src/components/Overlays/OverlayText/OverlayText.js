@@ -11,10 +11,11 @@ const OverlayText = ({
 	redirectLink,
 	redirectText,
 	redirectPath,
+	isPageHeader,
 }) => {
 	return (
 		<Wrapper>
-			<div className="text-container">
+			<div className={isPageHeader ? "page-header" : "text-container"}>
 				{h1Text && <h1>{h1Text}</h1>}
 				{h2Text && <h2>{h2Text}</h2>}
 				{h3Text && <h3>{h3Text}</h3>}
@@ -30,6 +31,38 @@ const OverlayText = ({
 	);
 };
 const Wrapper = styled.main`
+	.page-header {
+		z-index: 2;
+		width: 100%;
+		height: 25vh;
+		position: absolute;
+		top: 30%;
+		left: 50%;
+		transform: translate(-50%, -30%);
+		font-family: var(--FontTitles);
+		font-size: 1.2rem;
+		font-weight: 300;
+		color: var(--ColorWhite);
+		letter-spacing: 0.3rem;
+		display: grid;
+		place-items: center;
+		h2 {
+			font-size: 0.9rem;
+			text-transform: uppercase;
+			font-weight: 200;
+		}
+		h3 {
+			font-size: 1.45rem;
+			font-family: var(--FontTexts);
+			font-weight: 400;
+		}
+		p {
+			font-size: 1rem;
+			margin-top: -2rem;
+			color: var(--ColorGold);
+			letter-spacing: 0.4rem;
+		}
+	}
 	.text-container {
 		z-index: 2;
 		width: 100%;
