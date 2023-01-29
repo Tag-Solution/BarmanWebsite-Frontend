@@ -8,7 +8,7 @@ import {
 	GET_HOMEPAGE_ERROR,
 } from "../actions";
 
-import { API_HOME_GET } from "../utils/api_constants";
+import { API_HOME_GET } from "../utils/constants/api_constants";
 
 const initialState = {
 	homepage_loading: false,
