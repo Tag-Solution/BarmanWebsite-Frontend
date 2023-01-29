@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { OverlayImage } from "../../components/OverlayImage";
-import useWindowDimensions from "../../components/Utils/useWindowDimensions";
 
 import { useHomepageContext } from "../../context/HomepageContext";
+
+import useWindowDimensions from "../../components/Utils/useWindowDimensions";
+
+import { OverlayImage } from "../../components/Overlays";
 
 import { DummyPage, Preloader } from "../../pages";
 

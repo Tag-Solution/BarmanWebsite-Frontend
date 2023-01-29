@@ -1,10 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
-import { OverlayImage } from "../../components/OverlayImage";
+import { OverlayImage, OverlayText } from "../../components/Overlays";
 
 import ErrorImg from "../../assets/ErrorImg.jpg";
-import OverlayText from "../../components/OverlayText/OverlayText";
 
 const Error = () => {
 	return (
