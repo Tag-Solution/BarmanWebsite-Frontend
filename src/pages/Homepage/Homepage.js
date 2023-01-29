@@ -4,14 +4,11 @@ import styled from "styled-components";
 
 import { useHomepageContext } from "../../context/HomepageContext";
 
-import useWindowDimensions from "../../components/Utils/useWindowDimensions";
-
 import { OverlayImage } from "../../components/Overlays";
 
-import { AboutUs, DummyPage, Preloader } from "../../pages";
+import { AboutUs, Preloader } from "../../pages";
 
 const Homepage = () => {
-	const { width, height } = useWindowDimensions();
 	const { homepage, homepage_loading, homepage_error } = useHomepageContext();
 
 	/*

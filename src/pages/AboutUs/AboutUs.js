@@ -86,6 +86,7 @@ const Wrapper = styled.main`
 		}
 	}
 	.img-container {
+		max-width: 17rem;
 		height: 22rem;
 		display: flex;
 		align-items: center;
@@ -96,7 +97,7 @@ const Wrapper = styled.main`
 		}
 		.img-right {
 			position: relative;
-			top: 9rem;
+			top: 9.5rem;
 		}
 	}
 `;
