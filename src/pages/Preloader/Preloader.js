@@ -1,54 +1,41 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 
 import PreloaderImg from "../../assets/PreloaderImg.jpg";
+import useWindowDimensions from "../../components/Utils/useWindowDimensions";
 
 const Preloader = () => {
 	/*
 	 * isFullScreen
 	 */
-	const [windowDimensions, setWindowDimensions] = useState(
-		getWindowDimensions()
-	);
-	function getWindowDimensions() {
-		const { innerWidth: width, innerHeight: height } = window;
-		return {
-			width,
-			height,
-		};
-	}
-	console.log(windowDimensions);
-
-	useEffect(() => {
-		function handleResize() {
-			setWindowDimensions(getWindowDimensions());
-		}
-		window.addEventListener("resize", handleResize);
-		return () => window.removeEventListener("resize", handleResize);
-	}, []);
+	const { width, height } = useWindowDimensions();
 
 	return (
-		<Wrapper
-			style={{
-				width: windowDimensions.width + "px",
-				height: windowDimensions.height + "px",
-			}}
-		>
+		<Wrapper>
 			{/* Background Image */}
-			<div className="home-bg">
-				<img src={PreloaderImg} alt="Loading site, please wait." />
-				<div className="home-bg-overlay"></div>
-			</div>
+			<div
+				style={{
+					width: width,
+					height: height,
+				}}
+			>
+				<div className="home-bg">
+					<img src={PreloaderImg} alt="Loading site, please wait." />
+					<div className="home-bg-overlay"></div>
+				</div>
 
-			<div className="text-container">
-				<h2>Loading Site...</h2>
-				<h3>Please Wait!</h3>
+				<div className="text-container">
+					<h2>Loading Site...</h2>
+					<h3>Please Wait!</h3>
+				</div>
 			</div>
 		</Wrapper>
 	);
 };
 
-const Wrapper = styled.div`
+const Wrapper = styled.main`
+	overflow: hidden;
+	position: relative;
 	.home-bg {
 		position: absolute;
 		top: 0;
@@ -88,7 +75,7 @@ const Wrapper = styled.div`
 		display: grid;
 		place-items: center;
 	}
-	@media (min-width: 992px) {
+	@media (min-width: 768px) {
 		.text-container {
 			font-size: 1.6rem;
 			line-height: 4.7rem;

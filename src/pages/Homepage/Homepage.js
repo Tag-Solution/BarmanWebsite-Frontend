@@ -1,48 +1,28 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import useWindowDimensions from "../../components/Utils/useWindowDimensions";
 
 import { useHomepageContext } from "../../context/HomepageContext";
 
 import { DummyPage, Preloader } from "../../pages";
 
-const Homepage = (props) => {
-	const { isFullScreen } = props;
+const Homepage = ({ isFullScreen }) => {
+	const { width, height } = useWindowDimensions();
 	const { homepage, homepage_loading, homepage_error } = useHomepageContext();
-
-	/*
-	 * isFullScreen
-	 */
-	const [windowDimensions, setWindowDimensions] = useState(
-		getWindowDimensions()
-	);
-	function getWindowDimensions() {
-		const { innerWidth: width, innerHeight: height } = window;
-		return {
-			width,
-			height,
-		};
-	}
-
-	useEffect(() => {
-		function handleResize() {
-			setWindowDimensions(getWindowDimensions());
-		}
-		window.addEventListener("resize", handleResize);
-		return () => window.removeEventListener("resize", handleResize);
-	}, []);
 
 	const handleFullScreen = (isFullScreen) => {
 		if (isFullScreen) {
 			return {
-				width: windowDimensions.width + "px",
-				height: windowDimensions.height + "px",
+				width: width,
+				height: height,
+			};
+		} else {
+			return {
+				width: "100%",
+				height: "95vh",
 			};
 		}
-		return {
-			width: windowDimensions.width + "px",
-			height: windowDimensions.height * 0.942 + "px",
-		};
 	};
 
 	/*
@@ -94,6 +74,7 @@ const Homepage = (props) => {
 };
 
 const Wrapper = styled.main`
+	overflow: hidden;
 	.home-sect {
 		text-align: center;
 		position: relative;
