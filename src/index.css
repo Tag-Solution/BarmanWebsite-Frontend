@@ -81,6 +81,31 @@ hr {
 	border: 1px solid var(--ColorGold);
 }
 
+.main-btn-fill {
+	outline: none;
+	border: 1px solid var(--ColorWhite);
+	color: var(--ColorWhite);
+	padding: 0.4rem 0.6rem;
+	cursor: pointer;
+	transition: var(--MainTransition);
+	font-family: var(--FontTitles);
+	background: var(--ColorGold);
+}
+.main-btn-fill:hover {
+	background: var(--ColorWhite);
+	border: 1px solid var(--ColorGold);
+	color: var(--ColorGold);
+}
+
+@media (min-width: 768px) {
+	.main-btn {
+		padding: 0.6 1rem;
+	}
+	.main-btn-fill {
+		padding: 0.6rem 1.2rem;
+	}
+}
+
 /* ======================================================================== */
 /* 3. Queries */
 /* ======================================================================== */

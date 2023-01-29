@@ -15,10 +15,7 @@ const App = () => {
 	return (
 		<BrowserRouter basename="/BarmanWebsite-Frontend">
 			<Routes>
-				<Route
-					path="/"
-					element={<Homepage isFullScreen={true}></Homepage>}
-				></Route>
+				<Route path="/" element={<Homepage></Homepage>}></Route>
 				<Route path="/about-us" element={<AboutUs></AboutUs>}></Route>
 				<Route path="/owner" element={<Owner></Owner>}></Route>
 				<Route path="/features" element={<Features></Features>}></Route>
