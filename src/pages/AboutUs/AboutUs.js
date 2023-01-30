@@ -66,6 +66,7 @@ const AboutUs = ({ isSectionOnly }) => {
 };
 
 const Wrapper = styled.main`
+	width: 100%;
 	height: 100%;
 	.paragraphs {
 		margin: 0 auto;
@@ -115,8 +116,8 @@ const Wrapper = styled.main`
 	}
 
 	@media (min-width: 375px) {
-		max-width: 95%;
 		.img-container {
+			max-width: 95%;
 			.img img {
 				width: 9rem;
 			}

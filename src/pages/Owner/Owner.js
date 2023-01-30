@@ -23,7 +23,7 @@ const Owner = ({ isSectionOnly }) => {
 			{/* ============= */}
 			<div className="section-dark">
 				<div className="section-center">
-					{""}
+					<span></span>
 					<div className="img-container">
 						<img src={AboutUsBG} alt="Owner Page" />
 					</div>
