@@ -2,13 +2,14 @@ import React from "react";
 import styled from "styled-components";
 
 import { PageHeader } from "../../components/PageHeader";
+import { Owner } from "../../pages";
 
 import AboutUsBG from "../../assets/temp/AboutUsBG.jpg";
 
 const AboutUs = ({ isSectionOnly }) => {
 	return (
 		<Wrapper>
-			{isSectionOnly ? null : (
+			{!isSectionOnly && (
 				<PageHeader
 					imgSrc={AboutUsBG}
 					imgAlt={"About Us Page"}
@@ -17,6 +18,10 @@ const AboutUs = ({ isSectionOnly }) => {
 					pText={"History"}
 				></PageHeader>
 			)}
+
+			{/* ============= */}
+			{/* About Section */}
+			{/* ============= */}
 			<div className="section">
 				<div className="section-center">
 					<div className="section-title">
@@ -51,6 +56,11 @@ const AboutUs = ({ isSectionOnly }) => {
 					</div>
 				</div>
 			</div>
+
+			{/* ============= */}
+			{/* Owner Section */}
+			{/* ============= */}
+			<Owner isSectionOnly={true}></Owner>
 		</Wrapper>
 	);
 };
@@ -73,6 +83,7 @@ const Wrapper = styled.main`
 		margin: 2.5rem 0rem;
 		font-family: var(--FontTitles);
 		letter-spacing: 0.15rem;
+		text-align: center;
 		h2 {
 			font-size: 1.2rem;
 			font-weight: 300;
@@ -85,8 +96,9 @@ const Wrapper = styled.main`
 			margin-top: 0.3rem;
 		}
 	}
+
 	.img-container {
-		max-width: 95%;
+		max-width: 100%;
 		margin: 0 auto;
 		height: 22rem;
 		display: flex;
@@ -99,6 +111,23 @@ const Wrapper = styled.main`
 		.img-right {
 			position: relative;
 			top: 9.5rem;
+		}
+	}
+
+	@media (min-width: 375px) {
+		max-width: 95%;
+		.img-container {
+			.img img {
+				width: 9rem;
+			}
+		}
+	}
+	@media (min-width: 390px) {
+		.img-container {
+			height: 25rem;
+			.img img {
+				width: 9.2rem;
+			}
 		}
 	}
 `;

@@ -13,26 +13,18 @@
 
 :root {
 	/* Colors */
-	--ColorBlack: #000000;
 	--ColorWhite: #f7f7f7;
+	--ColorDark: #1b1b1b;
+	--ColorBlack: #000000;
 	--ColorBlack-1: #030303;
 	--ColorBlack-85: rgba(3, 3, 3, 0.85);
 	--ColorBlack-7: rgba(3, 3, 3, 0.7);
 	--ColorBlack-5: rgba(3, 3, 3, 0.5);
 	--ColorBlack-35: rgba(3, 3, 3, 0.35);
 	--ColorBlack-2: rgba(3, 3, 3, 0.2);
-	--ColorBlackHover: #0c0c0c;
 	--ColorGold: #ba8d3e;
-	--ColorGoldService: #ebebeb;
-	--ColorGoldLight: #fafafa;
-	--ColorGoldLight-7: #fafafaab;
 	--ColorFooterDivider: #505152;
-	--ColorFooterGrey: #d6d6d6;
-	--ColorFooterWhite: #dddddd;
-	--ColorFooterWhiteOP: #f8f8f8c9;
-	--ColorSocialIcons: #bebdbd;
 	--ColorSemiCrimson: rgb(255, 24, 70);
-	--ColorSearchInput: #dddddd83;
 	/* Fonts */
 	--FontTitles: "Libre Caslon Display", serif;
 	--FontTexts: "Montserrat", sans-serif;
@@ -71,6 +63,11 @@ hr {
 	height: 100%;
 	padding: 5rem 0rem;
 	background: var(--ColorWhite);
+}
+.section-dark {
+	height: 100%;
+	padding: 5rem 0rem;
+	background: var(--ColorDark);
 }
 .section-center {
 	width: 85%;
@@ -141,7 +138,18 @@ hr {
 /* 3. Queries */
 /* ======================================================================== */
 
-/*Media Queries:
+/*
+
+320px = iPhone 5/SE
+375px = iPhone 6/7/8/X
+390px = iPhone 12 Pro
+
+    @media (min-width: 375px) {
+    }
+
+    @media (min-width: 390px) {
+    }	
+
     @media (min-width: 480px) {
     }
 
