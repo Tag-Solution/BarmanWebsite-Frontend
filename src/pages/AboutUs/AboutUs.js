@@ -29,13 +29,13 @@ const AboutUs = ({ isSectionOnly }) => {
 						<h2>Nyu's Bartending</h2>
 					</div>
 					{/* Paragraphs */}
-					<div className="paragraphs">
+					<div className="paragraph">
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
 						consequuntur praesentium voluptatibus ad exercitationem magnam qui
 						modi saepe labore earum nulla ad.
 					</div>
 					<div className="divider"></div>
-					<div className="paragraphs">
+					<div className="paragraph">
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
 						consequuntur praesentium voluptatibus ad exercitationem magnam qui
 						modi saepe labore earum nulla ad.
@@ -68,15 +68,6 @@ const AboutUs = ({ isSectionOnly }) => {
 const Wrapper = styled.main`
 	width: 100%;
 	height: 100%;
-	.paragraphs {
-		margin: 0 auto;
-		font-family: var(--FontTexts);
-		letter-spacing: 0.12rem;
-		font-size: 0.87rem;
-		font-weight: 300;
-		text-align: left;
-		line-height: 1.45rem;
-	}
 	.divider {
 		height: 1.5rem;
 	}

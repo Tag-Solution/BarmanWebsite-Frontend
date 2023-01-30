@@ -72,7 +72,8 @@ hr {
 	background: var(--ColorDark);
 }
 .section-center {
-	width: 85%;
+	width: 90%;
+	height: 100%;
 	margin: 0 auto;
 	display: block;
 }
@@ -120,11 +121,30 @@ hr {
 	transition: var(--MainTransition);
 	font-family: var(--FontTitles);
 	background: var(--ColorGold);
+	text-align: center;
+	text-transform: uppercase;
 }
 .main-btn-fill:hover {
 	background: var(--ColorWhite);
 	border: 1px solid var(--ColorGold);
 	color: var(--ColorGold);
+}
+
+/* Texts */
+.paragraph {
+	font-family: var(--FontTexts);
+	letter-spacing: 0.12rem;
+	font-size: 0.87rem;
+	font-weight: 300;
+	text-align: left;
+	line-height: 1.45rem;
+}
+.paragraph-white {
+	font-family: var(--FontTexts);
+	letter-spacing: 0.12rem;
+	font-size: 0.87rem;
+	font-weight: 300;
+	line-height: 1.45rem;
 }
 
 @media (min-width: 768px) {
