@@ -30,7 +30,7 @@ const Owner = ({ isSectionOnly }) => {
 					<div className="info-container">
 						<h3>20 Years of Experience</h3>
 						<h2>Kevin Maurin</h2>
-						<p>
+						<p className="paragraph-white">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel rerum
 							vitae culpa veritatis, eos accusamus alias modi eaque temporibus
 							sit at iste, voluptas dicta excepturi! Vitae exercitationem
@@ -74,13 +74,6 @@ const Wrapper = styled.main`
 		h2 {
 			font-size: 2rem;
 			letter-spacing: 0.2rem;
-		}
-		p {
-			font-family: var(--FontTexts);
-			letter-spacing: 0.14rem;
-			font-size: 0.9rem;
-			font-weight: 300;
-			line-height: 1.45rem;
 		}
 		.signature-container {
 			margin-top: 1rem;
