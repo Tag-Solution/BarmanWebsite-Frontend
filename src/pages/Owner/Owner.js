@@ -56,8 +56,8 @@ const Wrapper = styled.main`
 		}
 	}
 	.info-container {
-		margin-top: 2.6rem;
-		height: 27rem;
+		margin-top: 4rem;
+		height: 28rem;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
