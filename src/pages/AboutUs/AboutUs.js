@@ -85,6 +85,7 @@ const Wrapper = styled.main`
 			margin-top: 0.3rem;
 		}
 	}
+
 	.img-container {
 		max-width: 95%;
 		margin: 0 auto;
@@ -99,6 +100,22 @@ const Wrapper = styled.main`
 		.img-right {
 			position: relative;
 			top: 9.5rem;
+		}
+	}
+
+	@media (min-width: 375px) {
+		.img-container {
+			.img img {
+				width: 9rem;
+			}
+		}
+	}
+	@media (min-width: 390px) {
+		.img-container {
+			height: 25rem;
+			.img img {
+				width: 9.2rem;
+			}
 		}
 	}
 `;

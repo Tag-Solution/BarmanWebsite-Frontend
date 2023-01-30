@@ -141,7 +141,14 @@ hr {
 /* 3. Queries */
 /* ======================================================================== */
 
-/*Media Queries:
+/*
+
+320px = iPhone 5/SE
+375px = iPhone SE
+
+    @media (min-width: 375px) {
+    }
+
     @media (min-width: 480px) {
     }
 
