@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-const CardModel1 = ({ id, title, subtitle, description, image }) => {
+const CardModel1 = ({ title, subtitle, description, image }) => {
 	return (
-		<Wrapper key={id}>
+		<Wrapper>
 			<div className="feature-center">
 				<div className="feature-top">
 					<img src={image.imageUrl} alt="Alt" />

@@ -29,7 +29,7 @@ const Features = () => {
 						const { id, title, description } = singleFeature;
 						return (
 							<CardModel1
-								id={id}
+								key={id}
 								title={title}
 								description={description}
 								image={singleFeature.image}

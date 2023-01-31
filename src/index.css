@@ -116,7 +116,7 @@ hr {
 	outline: none;
 	border: 1px solid var(--ColorWhite);
 	color: var(--ColorWhite);
-	padding: 0.4rem 0.6rem;
+	padding: 0.65rem 1rem;
 	cursor: pointer;
 	transition: var(--MainTransition);
 	font-family: var(--FontTitles);
@@ -134,7 +134,7 @@ hr {
 .paragraph {
 	font-family: var(--FontTexts);
 	letter-spacing: 0.12rem;
-	font-size: 0.87rem;
+	font-size: 0.92rem;
 	font-weight: 300;
 	text-align: left;
 	line-height: 1.45rem;
@@ -142,8 +142,8 @@ hr {
 .paragraph-white {
 	font-family: var(--FontTexts);
 	letter-spacing: 0.12rem;
-	font-size: 0.87rem;
-	font-weight: 300;
+	font-size: 0.92rem;
+	font-weight: 200;
 	line-height: 1.45rem;
 }
 

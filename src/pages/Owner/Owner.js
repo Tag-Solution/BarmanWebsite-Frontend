@@ -21,9 +21,9 @@ const Owner = ({ isSectionOnly }) => {
 			{/* ============= */}
 			{/* Owner Section */}
 			{/* ============= */}
+			<h2></h2>
 			<div className="section-dark">
 				<div className="section-center">
-					<span></span>
 					<div className="img-container">
 						<img src={AboutUsBG} alt="Owner Page" />
 					</div>
@@ -57,7 +57,7 @@ const Wrapper = styled.main`
 	}
 	.info-container {
 		margin-top: 4rem;
-		height: 28rem;
+		height: 29.5rem;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;

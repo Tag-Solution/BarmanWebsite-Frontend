@@ -72,18 +72,19 @@ const Wrapper = styled.main`
 		height: 1.5rem;
 	}
 	.cta-container {
-		margin: 2.5rem 0rem;
+		margin: 3rem 0rem;
 		font-family: var(--FontTitles);
 		letter-spacing: 0.15rem;
 		text-align: center;
 		h2 {
-			font-size: 1.2rem;
+			font-size: 1.5rem;
 			font-weight: 300;
 			text-transform: uppercase;
 			color: var(--ColorGold);
 		}
 		p {
-			font-weight: 600;
+			font-size: 1.35rem;
+			font-weight: 300;
 			letter-spacing: 0.05rem;
 			margin-top: 0.3rem;
 		}
@@ -118,7 +119,7 @@ const Wrapper = styled.main`
 		.img-container {
 			height: 25rem;
 			.img img {
-				width: 9.2rem;
+				width: 10rem;
 			}
 		}
 	}
