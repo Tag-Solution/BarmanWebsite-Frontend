@@ -11,9 +11,12 @@ import {
 	Error,
 } from "../../pages/";
 
+import ScrollToTop from "../Utils/ScrollToTop";
+
 const App = () => {
 	return (
 		<BrowserRouter basename="/BarmanWebsite-Frontend">
+			<ScrollToTop></ScrollToTop>
 			<Routes>
 				<Route path="/" element={<Homepage></Homepage>}></Route>
 				<Route path="/about-us" element={<AboutUs></AboutUs>}></Route>
