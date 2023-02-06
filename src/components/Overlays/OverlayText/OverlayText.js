@@ -22,12 +22,13 @@ const OverlayText = ({
 				{pText && <p>{pText}</p>}
 				{spanText && <span>{spanText}</span>}
 				{redirectLink && (
+					// Only used by 404Page so far
 					<div className="btn-positioning">
 						<MainButton
 							isLinkBtn
 							linkPath={redirectPath}
 							btnText={redirectText}
-							classNames="gold-white-gold-btn"
+							classNames="gold-white-gold-trans1-btn"
 						></MainButton>
 					</div>
 				)}
