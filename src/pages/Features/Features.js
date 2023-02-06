@@ -4,9 +4,11 @@ import { Link } from "react-router-dom";
 
 import { PageHeader } from "../../components/PageHeader";
 
+import { CardModel1 } from "../../components/Cards/CardModel1";
+import { MainButton } from "../../components/Buttons";
+
 import AboutUsBG from "../../assets/temp/AboutUsBG.jpg";
 import { features } from "../../utils/temp/features";
-import CardModel1 from "../../components/Cards/CardModel1/CardModel1";
 
 const Features = () => {
 	return (
@@ -37,9 +39,12 @@ const Features = () => {
 						);
 					})}
 					<div className="btn-container">
-						<Link to="/" className="main-btn-fill btn-position">
-							Return to Home
-						</Link>
+						<MainButton
+							isLinkBtn
+							linkPath={"/"}
+							btnText={"Return to Home"}
+							classNames="gold-white-gold-btn"
+						></MainButton>
 					</div>
 				</div>
 			</div>

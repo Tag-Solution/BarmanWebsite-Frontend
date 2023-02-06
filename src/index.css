@@ -7,10 +7,10 @@
 /* ======================================================================== */
 
 @import url("https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100&display=swap");
-/* ======================================================================== */
-/* 2. CSS */
-/* ======================================================================== */
 
+/* ======================================================================== */
+/* 2. Globals */
+/* ======================================================================== */
 :root {
 	/* Colors */
 	--ColorWhite: #f7f7f7;
@@ -22,7 +22,8 @@
 	--ColorBlack-5: rgba(3, 3, 3, 0.5);
 	--ColorBlack-35: rgba(3, 3, 3, 0.35);
 	--ColorBlack-2: rgba(3, 3, 3, 0.2);
-	--ColorGold: #ba8d3e;
+	--ColorGold: #ba8c3e;
+	--ColorGoldLight: #f5e6cba7;
 	--ColorFooterDivider: #505152;
 	--ColorSemiCrimson: rgb(255, 24, 70);
 	/* Fonts */
@@ -57,8 +58,10 @@ hr {
 	border: none;
 	border-top: 1px solid var(--ColorFooterDivider);
 }
-/* Sections */
-/* Sections */
+
+/* ======================================================================== */
+/* 3. Sections */
+/* ======================================================================== */
 .section {
 	width: 100%;
 	height: 100%;
@@ -97,40 +100,67 @@ hr {
 	color: var(--ColorCrimson);
 }
 
-/* Classes */
-.main-btn {
+/* ======================================================================== */
+/* 4. Buttons */
+/* ======================================================================== */
+.base-btn-link {
 	outline: none;
-	border: 1px solid var(--ColorGold);
-	color: var(--ColorWhite);
-	padding: 0.4rem 0.6rem;
-	cursor: pointer;
-	transition: var(--MainTransition);
+	border: 1px solid;
 	font-family: var(--FontTitles);
+	transition: var(--MainTransition);
+	cursor: pointer;
+	padding: 0.7rem 1.4rem;
+	font-size: 0.9rem;
+	font-weight: 200;
+	letter-spacing: 0.26rem;
+	text-transform: uppercase;
 }
-.main-btn:hover {
+
+/* Gold White Transparent */
+.gold-white-transparent-btn {
+	border-color: var(--ColorGold);
+	color: var(--ColorWhite);
+	background: transparent;
+}
+.gold-white-transparent-btn:hover {
 	background: var(--ColorGold);
 	border: 1px solid var(--ColorGold);
 }
 
-.main-btn-fill {
-	outline: none;
-	border: 1px solid var(--ColorWhite);
+/* Gold White Gold */
+.gold-white-gold-btn {
+	border-color: var(--ColorGold);
 	color: var(--ColorWhite);
-	padding: 0.65rem 1rem;
-	cursor: pointer;
-	transition: var(--MainTransition);
-	font-family: var(--FontTitles);
 	background: var(--ColorGold);
-	text-align: center;
-	text-transform: uppercase;
 }
-.main-btn-fill:hover {
+.gold-white-gold-btn:hover {
 	background: var(--ColorWhite);
 	border: 1px solid var(--ColorGold);
 	color: var(--ColorGold);
 }
 
-/* Texts */
+/* 
+Gold White Gold 
+Transition1: White
+*/
+.gold-white-gold-trans1-btn {
+	border-color: var(--ColorGold);
+	color: var(--ColorWhite);
+	background: var(--ColorGold);
+}
+.gold-white-gold-trans1-btn:hover {
+	background: var(--ColorWhite);
+	border: 1px solid var(--ColorWhite);
+	color: var(--ColorGold);
+}
+
+@media (min-width: 768px) {
+}
+
+/* ======================================================================== */
+/* 5. Texts */
+/* ======================================================================== */
+
 .paragraph {
 	font-family: var(--FontTexts);
 	letter-spacing: 0.12rem;
@@ -147,21 +177,78 @@ hr {
 	line-height: 1.45rem;
 }
 
-@media (min-width: 768px) {
-	.main-btn {
-		padding: 0.6 1rem;
-	}
-	.main-btn-fill {
-		padding: 0.6rem 1.2rem;
-	}
+/* ======================================================================== */
+/* 6. Forms */
+/* ======================================================================== */
+.main-form-container {
+	width: 100%;
+}
+
+.main-form-container .main-form {
+	background: var(--ColorGoldLight);
+	padding: 3rem 1.5rem;
+}
+
+/* Single Input */
+.main-form .main-form-single-input {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 2rem;
+}
+.main-form .main-form-single-input label {
+	padding-left: 0.25rem;
+	font-size: 1.2rem;
+	font-weight: 600;
+	font-family: var(--FontTitles);
+	color: var(--FontColorDark);
+	letter-spacing: 0.2rem;
+	margin-bottom: 0.5rem;
+}
+.main-form .main-form-single-input input {
+	height: 2.5rem;
+	border: 1px solid lightgray;
+	font-family: var(--FontTexts);
+	font-size: 1rem;
+	font-weight: 200;
+	letter-spacing: 0.05rem;
+	padding-left: 0.65rem;
+}
+
+.main-form .main-form-single-input input::placeholder {
+	font-weight: 400;
+	font-size: 0.8rem;
+	opacity: 0.75;
+}
+
+/* Single Textarea */
+.main-form .main-form-single-input textarea {
+	height: 8rem;
+	padding-top: 0.5rem;
+	border: 1px solid lightgray;
+	font-family: var(--FontTexts);
+	font-size: 1rem;
+	font-weight: 200;
+	letter-spacing: 0.05rem;
+	padding-left: 0.65rem;
+	resize: none;
+}
+
+.main-form .main-form-single-input textarea::placeholder {
+	font-weight: 400;
+	font-size: 0.8rem;
+	opacity: 0.75;
+}
+
+/* Form Button */
+.main-form .main-form-btn-container {
+	width: 100%;
+	text-align: center;
 }
 
 /* ======================================================================== */
-/* 3. Queries */
+/* Queries */
 /* ======================================================================== */
-
 /*
-
 320px = iPhone 5/SE
 375px = iPhone 6/7/8/X
 390px = iPhone 12 Pro
@@ -184,4 +271,5 @@ hr {
 
     @media (min-width: 1200px) {
     }
+
 */

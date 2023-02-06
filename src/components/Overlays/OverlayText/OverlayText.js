@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { MainButton } from "../../Buttons";
 
 const OverlayText = ({
 	h1Text,
@@ -22,9 +22,15 @@ const OverlayText = ({
 				{pText && <p>{pText}</p>}
 				{spanText && <span>{spanText}</span>}
 				{redirectLink && (
-					<Link className="main-btn-fill btn-positioning" to={redirectPath}>
-						{redirectText}
-					</Link>
+					// Only used by 404Page so far
+					<div className="btn-positioning">
+						<MainButton
+							isLinkBtn
+							linkPath={redirectPath}
+							btnText={redirectText}
+							classNames="gold-white-gold-trans1-btn"
+						></MainButton>
+					</div>
 				)}
 			</div>
 		</Wrapper>

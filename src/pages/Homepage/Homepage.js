@@ -7,6 +7,7 @@ import { useHomepageContext } from "../../context/HomepageContext";
 import { OverlayImage } from "../../components/Overlays";
 
 import { AboutUs, Preloader } from "../../pages";
+import { MainButton } from "../../components/Buttons";
 
 const Homepage = () => {
 	const { homepage, homepage_loading, homepage_error } = useHomepageContext();
@@ -46,14 +47,17 @@ const Homepage = () => {
 							<p>{direction}</p>
 						</div>
 						{/* Button */}
-						<Link to={buttonResponse?.url} className="home-btn main-btn">
-							{buttonResponse?.title}
-						</Link>
+						<MainButton
+							isLinkBtn
+							linkPath={buttonResponse?.url}
+							btnText={buttonResponse?.title}
+							classNames="gold-white-transparent-btn"
+						></MainButton>
 					</div>
 				</div>
 			</Wrapper>
 			{/* ============= */}
-			{/* Otras Paginas */}
+			{/* Otras Sections */}
 			{/* ============= */}
 			<AboutUs isSectionOnly={true}></AboutUs>
 		</>
@@ -109,13 +113,6 @@ const Wrapper = styled.main`
 				font-family: var(--FontTexts);
 			}
 		}
-		.home-btn {
-			font-size: 1rem;
-			font-weight: 200;
-			letter-spacing: 0.26rem;
-			text-transform: uppercase;
-			padding: 0.65rem 2.1rem;
-		}
 	}
 
 	@media (min-width: 768px) {
@@ -137,10 +134,6 @@ const Wrapper = styled.main`
 					font-size: 0.95rem;
 					letter-spacing: 0.2rem;
 				}
-			}
-			.home-btn {
-				font-size: 1.1rem;
-				letter-spacing: 0.35rem;
 			}
 		}
 	}
@@ -164,10 +157,6 @@ const Wrapper = styled.main`
 					letter-spacing: 0.2rem;
 				}
 			}
-			.home-btn {
-				font-size: 1.3rem;
-				letter-spacing: 0.35rem;
-			}
 		}
 	}
 
@@ -190,10 +179,6 @@ const Wrapper = styled.main`
 					font-size: 0.9rem;
 					letter-spacing: 0.2rem;
 				}
-			}
-			.home-btn {
-				font-size: 1.3rem;
-				letter-spacing: 0.35rem;
 			}
 		}
 	}
