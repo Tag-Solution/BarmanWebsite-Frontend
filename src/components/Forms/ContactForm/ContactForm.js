@@ -1,7 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 
+import { MainButton } from "../../Buttons";
+
 const ContactForm = () => {
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		console.log("====================================");
+		console.log("Btn Clicked");
+		console.log("====================================");
+	};
+
 	return (
 		<Wrapper>
 			<div className="main-form-container">
@@ -48,7 +57,11 @@ const ContactForm = () => {
 
 					{/* Submit Form */}
 					<div className="main-form-btn-container">
-						<button type="submit">Submit</button>
+						<MainButton
+							btnText="Submit"
+							buttonAction={handleSubmit}
+							classNames="gold-white-gold-trans1-btn"
+						></MainButton>
 					</div>
 				</form>
 			</div>

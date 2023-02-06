@@ -97,7 +97,7 @@ const Wrapper = styled.main`
 			span {
 				display: grid;
 				place-items: center;
-				font-size: 2.7rem;
+				font-size: 3.2rem;
 				color: var(--ColorGold);
 			}
 			.info {

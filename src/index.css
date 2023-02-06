@@ -103,45 +103,58 @@ hr {
 /* ======================================================================== */
 /* 4. Buttons */
 /* ======================================================================== */
-.main-btn {
+.base-btn-link {
 	outline: none;
-	border: 1px solid var(--ColorGold);
-	color: var(--ColorWhite);
-	padding: 0.4rem 0.6rem;
-	cursor: pointer;
-	transition: var(--MainTransition);
+	border: 1px solid;
 	font-family: var(--FontTitles);
+	transition: var(--MainTransition);
+	cursor: pointer;
+	padding: 0.7rem 1.4rem;
+	font-size: 0.9rem;
+	font-weight: 200;
+	letter-spacing: 0.26rem;
+	text-transform: uppercase;
 }
-.main-btn:hover {
+
+/* Gold White Transparent */
+.gold-white-transparent-btn {
+	border-color: var(--ColorGold);
+	color: var(--ColorWhite);
+	background: transparent;
+}
+.gold-white-transparent-btn:hover {
 	background: var(--ColorGold);
 	border: 1px solid var(--ColorGold);
 }
 
-.main-btn-fill {
-	outline: none;
-	border: 1px solid var(--ColorWhite);
+/* Gold White Gold */
+.gold-white-gold-btn {
+	border-color: var(--ColorGold);
 	color: var(--ColorWhite);
-	padding: 0.65rem 1rem;
-	cursor: pointer;
-	transition: var(--MainTransition);
-	font-family: var(--FontTitles);
 	background: var(--ColorGold);
-	text-align: center;
-	text-transform: uppercase;
 }
-.main-btn-fill:hover {
+.gold-white-gold-btn:hover {
 	background: var(--ColorWhite);
 	border: 1px solid var(--ColorGold);
 	color: var(--ColorGold);
 }
 
+/* 
+Gold White Gold 
+Transition1: White
+*/
+.gold-white-gold-trans1-btn {
+	border-color: var(--ColorGold);
+	color: var(--ColorWhite);
+	background: var(--ColorGold);
+}
+.gold-white-gold-trans1-btn:hover {
+	background: var(--ColorWhite);
+	border: 1px solid var(--ColorWhite);
+	color: var(--ColorGold);
+}
+
 @media (min-width: 768px) {
-	.main-btn {
-		padding: 0.6 1rem;
-	}
-	.main-btn-fill {
-		padding: 0.6rem 1.2rem;
-	}
 }
 
 /* ======================================================================== */
@@ -232,8 +245,6 @@ hr {
 	text-align: center;
 }
 
-.main-form .main-form-btn-container button {
-}
 /* ======================================================================== */
 /* Queries */
 /* ======================================================================== */
