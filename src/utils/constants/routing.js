@@ -11,11 +11,6 @@ export const links = [
 	},
 	{
 		id: 3,
-		title: "Owner",
-		path: "/owner",
-	},
-	{
-		id: 4,
 		title: "Features",
 		path: "/features",
 	},
@@ -25,7 +20,7 @@ export const links = [
 		path: "/image-gallery",
 	},
 	{
-		id: 4,
+		id: 5,
 		title: "Contact",
 		path: "/contact-us",
 	},
