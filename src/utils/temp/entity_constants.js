@@ -254,7 +254,7 @@ export const FeaturesPage = {
  * ===============================
  */
 
-export const ContactsPage = {
+export const ContactPage = {
 	id: 2,
 	address: "288 Chemin de la Ramasse",
 	mobile: "+41 79 400 22 22",
@@ -263,6 +263,10 @@ export const ContactsPage = {
 	instagram: "/insta",
 	twitter: "twitter",
 	youtube: "youtube",
+	formTitle: "Get in Touch!",
+	formSubtitle: "Kevin Maurin",
+	formParagraph:
+		"Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore repellendus facilis sed.",
 	formAction: "/formspreeUrl",
 	pageHeader: {
 		id: 2,
