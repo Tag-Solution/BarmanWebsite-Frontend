@@ -28,7 +28,6 @@ const Features = () => {
 				<div className="section-center">
 					{/* Features Map */}
 					{FeaturesPage.features?.map((singleFeature) => {
-						console.log(singleFeature);
 						const { id, title, description } = singleFeature;
 						return (
 							<CardModel1
