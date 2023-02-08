@@ -82,8 +82,7 @@ export const AboutUsPage = {
 		title: "Our History",
 		image: {
 			id: 2,
-			imageUrl:
-				"https://barmanwebsite.s3.amazonaws.com/1675795788214_HomeBG.jpg",
+			imageUrl: "https://barmanwebsite.s3.amazonaws.com/1674177958982_bar.jpg",
 			imageName: "HomeBG.jpg",
 			imageAwsName: "1675795788214_HomeBG.jpg",
 		},
@@ -92,14 +91,14 @@ export const AboutUsPage = {
 		{
 			id: 2,
 			imageUrl:
-				"https://barmanwebsite.s3.amazonaws.com/1675795788214_HomeBG.jpg",
+				"https://barmanwebsite.s3.amazonaws.com/1675696651878_AboutUsBG.jpg",
 			imageName: "HomeBG.jpg",
 			imageAwsName: "1675795788214_HomeBG.jpg",
 		},
 		{
 			id: 3,
 			imageUrl:
-				"https://barmanwebsite.s3.amazonaws.com/1675795788214_HomeBG.jpg",
+				"https://barmanwebsite.s3.amazonaws.com/1675696651878_AboutUsBG.jpg",
 			imageName: "HomeBG.jpg",
 			imageAwsName: "1675795788214_HomeBG.jpg",
 		},
@@ -127,15 +126,15 @@ export const OwnerPage = {
 		title: "Nyu's",
 		image: {
 			id: 2,
-			imageUrl:
-				"https://barmanwebsite.s3.amazonaws.com/1675795788214_HomeBG.jpg",
+			imageUrl: "https://barmanwebsite.s3.amazonaws.com/1674177958982_bar.jpg",
 			imageName: "HomeBG.jpg",
 			imageAwsName: "1675795788214_HomeBG.jpg",
 		},
 	},
 	image: {
 		id: 2,
-		imageUrl: "https://barmanwebsite.s3.amazonaws.com/1675795788214_HomeBG.jpg",
+		imageUrl:
+			"https://barmanwebsite.s3.amazonaws.com/1674762497313_HomeBG2.jpg",
 		imageName: "HomeBG.jpg",
 		imageAwsName: "1675795788214_HomeBG.jpg",
 	},
@@ -156,8 +155,7 @@ export const FeaturesPage = {
 		title: "Cocktail's & Vins",
 		image: {
 			id: 2,
-			imageUrl:
-				"https://barmanwebsite.s3.amazonaws.com/1675795788214_HomeBG.jpg",
+			imageUrl: "https://barmanwebsite.s3.amazonaws.com/1674177958982_bar.jpg",
 			imageName: "HomeBG.jpg",
 			imageAwsName: "1675795788214_HomeBG.jpg",
 		},
@@ -274,8 +272,7 @@ export const ContactPage = {
 		title: "Geneve Suisse",
 		image: {
 			id: 2,
-			imageUrl:
-				"https://barmanwebsite.s3.amazonaws.com/1675795788214_HomeBG.jpg",
+			imageUrl: "https://barmanwebsite.s3.amazonaws.com/1674177958982_bar.jpg",
 			imageName: "HomeBG.jpg",
 			imageAwsName: "1675795788214_HomeBG.jpg",
 		},
