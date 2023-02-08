@@ -6,11 +6,10 @@ import { PageHeader } from "../../components/PageHeader";
 import { CardModel1 } from "../../components/Cards/CardModel1";
 import { MainButton } from "../../components/Buttons";
 
-import AboutUsBG from "../../assets/temp/AboutUsBG.jpg";
 import { FeaturesPage } from "../../utils/temp/entity_constants";
 
 const Features = () => {
-	const { id, header, subtitle, title, image } = FeaturesPage.pageHeader;
+	const { header, subtitle, title, image } = FeaturesPage.pageHeader;
 	return (
 		<Wrapper>
 			<PageHeader

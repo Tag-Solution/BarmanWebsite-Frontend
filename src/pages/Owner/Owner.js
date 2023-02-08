@@ -3,42 +3,38 @@ import styled from "styled-components";
 
 import { PageHeader } from "../../components/PageHeader";
 
-import AboutUsBG from "../../assets/temp/AboutUsBG.jpg";
+import { OwnerPage } from "../../utils/temp/entity_constants";
 
 const Owner = ({ isSectionOnly }) => {
+	const { subtitle, title, paragraph1, name, position, pageHeader, image } =
+		OwnerPage;
 	return (
 		<Wrapper>
 			{!isSectionOnly && (
 				<PageHeader
-					imgSrc={AboutUsBG}
-					imgAlt={"Owner Page"}
-					h2Text={"Owner"}
-					h3Text={"Kevin Maurin"}
-					pText={"Mixologist"}
+					imgSrc={pageHeader.image.imageUrl}
+					imgAlt={pageHeader.header}
+					h2Text={pageHeader.header}
+					h3Text={pageHeader.title}
+					pText={pageHeader.subtitle}
 				></PageHeader>
 			)}
 
 			{/* ============= */}
 			{/* Owner Section */}
 			{/* ============= */}
-			<h2></h2>
 			<div className="section-dark">
 				<div className="section-center">
 					<div className="img-container">
-						<img src={AboutUsBG} alt="Owner Page" />
+						<img src={image.imageUrl} alt={image.imageName} />
 					</div>
 					<div className="info-container">
-						<h3>20 Years of Experience</h3>
-						<h2>Kevin Maurin</h2>
-						<p className="paragraph-white">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel rerum
-							vitae culpa veritatis, eos accusamus alias modi eaque temporibus
-							sit at iste, voluptas dicta excepturi! Vitae exercitationem
-							molestias eligendi rerum.
-						</p>
+						<h3>{subtitle}</h3>
+						<h2>{title}</h2>
+						<p className="paragraph-white">{paragraph1}</p>
 						<div className="signature-container">
-							<h3>Kevin Maurin</h3>
-							<h2>Mixologist</h2>
+							<h3>{name}</h3>
+							<h2>{position}</h2>
 						</div>
 					</div>
 				</div>
@@ -50,9 +46,11 @@ const Owner = ({ isSectionOnly }) => {
 const Wrapper = styled.main`
 	.img-container {
 		width: 100%;
-		height: 100%;
+		height: 30rem;
 		img {
 			width: 100%;
+			height: 100%;
+			object-fit: cover;
 		}
 	}
 	.info-container {

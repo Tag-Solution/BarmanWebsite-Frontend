@@ -4,64 +4,72 @@ import styled from "styled-components";
 import { PageHeader } from "../../components/PageHeader";
 import { Owner } from "../../pages";
 
-import AboutUsBG from "../../assets/temp/AboutUsBG.jpg";
+import { AboutUsPage } from "../../utils/temp/entity_constants";
 
 const AboutUs = ({ isSectionOnly }) => {
+	const {
+		subtitle,
+		title,
+		paragraph1,
+		paragraph2,
+		ctaTitle,
+		ctaInfo,
+		pageHeader,
+		images,
+	} = AboutUsPage;
 	return (
-		<Wrapper>
-			{!isSectionOnly && (
-				<PageHeader
-					imgSrc={AboutUsBG}
-					imgAlt={"About Us Page"}
-					h2Text={"About Us"}
-					h3Text={"Nyu's Bartending"}
-					pText={"History"}
-				></PageHeader>
-			)}
+		<>
+			<Wrapper>
+				{!isSectionOnly && (
+					<PageHeader
+						imgSrc={pageHeader.image.imageUrl}
+						imgAlt={pageHeader.header}
+						h2Text={pageHeader.header}
+						h3Text={pageHeader.title}
+						pText={pageHeader.subtitle}
+					></PageHeader>
+				)}
 
-			{/* ============= */}
-			{/* About Section */}
-			{/* ============= */}
-			<div className="section">
-				<div className="section-center">
-					<div className="section-title">
-						<span>About Us</span>
-						<h2>Nyu's Bartending</h2>
-					</div>
-					{/* Paragraphs */}
-					<div className="paragraph">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
-						consequuntur praesentium voluptatibus ad exercitationem magnam qui
-						modi saepe labore earum nulla ad.
-					</div>
-					<div className="divider"></div>
-					<div className="paragraph">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
-						consequuntur praesentium voluptatibus ad exercitationem magnam qui
-						modi saepe labore earum nulla ad.
-					</div>
-					{/* CTA */}
-					<div className="cta-container">
-						<h2>Réservations</h2>
-						<p>+41 00 000 00 00</p>
-					</div>
-					{/* Images */}
-					<div className="img-container">
-						<div className="img img-left">
-							<img src={AboutUsBG} alt="About Images" />
+				{/* ============= */}
+				{/* About Section */}
+				{/* ============= */}
+				<div className="section">
+					<div className="section-center">
+						<div className="section-title">
+							<span>{subtitle}</span>
+							<h2>{title}</h2>
 						</div>
-						<div className="img img-right">
-							<img src={AboutUsBG} alt="About Images" />
+						{/* Paragraphs */}
+						<div className="paragraph">{paragraph1}</div>
+						<div className="divider"></div>
+						<div className="paragraph">{paragraph2}</div>
+						{/* CTA */}
+						<div className="cta-container">
+							<h2>{ctaTitle}</h2>
+							<p>{ctaInfo}</p>
+						</div>
+
+						<div className="divider"></div>
+
+						{/* Images */}
+						<div className="img-container">
+							<div className="img img-left">
+								<img src={images[0].imageUrl} alt={images[0].imageName} />
+							</div>
+							<div className="img img-right">
+								<img src={images[1].imageUrl} alt={images[1].imageName} />
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
+				<div className="division"></div>
+			</Wrapper>
 
 			{/* ============= */}
 			{/* Owner Section */}
 			{/* ============= */}
 			<Owner isSectionOnly={true}></Owner>
-		</Wrapper>
+		</>
 	);
 };
 
@@ -89,38 +97,21 @@ const Wrapper = styled.main`
 			margin-top: 0.3rem;
 		}
 	}
-
 	.img-container {
-		max-width: 100%;
-		margin: 0 auto;
+		margin: 0rem auto;
 		height: 22rem;
 		display: flex;
-		align-items: center;
 		justify-content: space-between;
+		.img {
+			height: 80%;
+		}
 		.img img {
-			margin-top: -8rem;
-			width: 8rem;
+			width: 8.2rem;
+			height: 90%;
+			object-fit: cover;
 		}
 		.img-right {
-			position: relative;
-			top: 9.5rem;
-		}
-	}
-
-	@media (min-width: 375px) {
-		.img-container {
-			max-width: 95%;
-			.img img {
-				width: 9rem;
-			}
-		}
-	}
-	@media (min-width: 390px) {
-		.img-container {
-			height: 25rem;
-			.img img {
-				width: 10rem;
-			}
+			margin-top: auto;
 		}
 	}
 `;

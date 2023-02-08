@@ -65,14 +65,14 @@ export const HomeResponse = {
  * ===============================
  */
 
-export const AboutUs = {
+export const AboutUsPage = {
 	id: 2,
 	subtitle: "Nyu's Bar",
 	title: "Our History",
 	paragraph1:
-		"Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, ex?",
+		"Lorem ipsum dolor sit amet LoLorem ipsum dolor sit amet Lorem ipsum dolor sit amet rem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, ex?",
 	paragraph2:
-		" Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, et?",
+		"Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, et?",
 	ctaTitle: "Reservation",
 	ctaInfo: "+41 00 000 00 00",
 	pageHeader: {
@@ -117,7 +117,7 @@ export const OwnerPage = {
 	subtitle: "20 Year Experience",
 	title: "Kevin Maurin",
 	paragraph1:
-		"Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque earum veritatis ipsam magnam labore dicta. Porro ex eligendi quam repellat?",
+		"Lorem ipsum dolor sit amet cLorem ipsum dolor sit amet coonsectetur adiLorem ipsum dolor sit amet copisicing elit. Itaque earum veritatis ipsam magnam labore dicta. Porro ex eligendi quam repellat?",
 	name: "Kevin Maurin",
 	position: "Jefe De Jefes",
 	pageHeader: {
