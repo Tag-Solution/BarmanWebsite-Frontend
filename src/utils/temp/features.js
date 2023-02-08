@@ -1,4 +1,4 @@
-export const features = [
+export const featuress = [
 	{
 		id: 1,
 		title: "Mojito Party",

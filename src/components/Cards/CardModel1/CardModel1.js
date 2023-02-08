@@ -6,7 +6,7 @@ const CardModel1 = ({ title, subtitle, description, image }) => {
 		<Wrapper>
 			<div className="feature-center">
 				<div className="feature-top">
-					<img src={image.imageUrl} alt="Alt" />
+					<img src={image.imageUrl} alt={image.imageName} />
 				</div>
 				<div className="feature-bot">
 					<h2>{title}</h2>
