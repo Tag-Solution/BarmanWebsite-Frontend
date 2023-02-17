@@ -7,7 +7,6 @@ import { HiOutlineMail } from "react-icons/hi";
 import { PageHeader } from "../../components/PageHeader";
 import { ContactForm } from "../../components/Forms";
 
-import AboutUsBG from "../../assets/temp/AboutUsBG.jpg";
 import { ContactPage } from "../../utils/temp/entity_constants";
 
 const Contact = () => {
