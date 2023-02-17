@@ -6,20 +6,32 @@ import { HiOutlineMail } from "react-icons/hi";
 
 import { PageHeader } from "../../components/PageHeader";
 import { ContactForm } from "../../components/Forms";
-import AboutUsBG from "../../assets/temp/AboutUsBG.jpg";
-import { contact_info } from "../../utils/temp/contact_info";
+
+import { ContactPage } from "../../utils/temp/entity_constants";
 
 const Contact = () => {
-	const { id, address, mobile, email, facebook, instagram, twitter, youtube } =
-		contact_info;
+	const {
+		id,
+		address,
+		mobile,
+		email,
+		facebook,
+		instagram,
+		twitter,
+		youtube,
+		formTitle,
+		formSubtitle,
+		formParagraph,
+	} = ContactPage;
+
 	return (
 		<Wrapper>
 			<PageHeader
-				imgSrc={AboutUsBG}
-				imgAlt={"About Us Page"}
-				h2Text={"Contact Us"}
-				h3Text={"Réservations"}
-				pText={"Genève, Suisse"}
+				imgSrc={ContactPage.pageHeader?.image.imageUrl}
+				imgAlt={ContactPage.pageHeader?.header}
+				h2Text={ContactPage.pageHeader?.header}
+				h3Text={ContactPage.pageHeader?.title}
+				pText={ContactPage.pageHeader?.subtitle}
 			></PageHeader>
 
 			{/* =============== */}
@@ -57,12 +69,9 @@ const Contact = () => {
 					{/* Contact Form */}
 					<div className="contact-form-container">
 						<div className="contact-texts-container">
-							<h3>Kevin Maurin</h3>
-							<h2>Get in touch!</h2>
-							<p className="paragraph">
-								Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-								Temporibus pariatur maiores voluptatibus.
-							</p>
+							<h3>{formSubtitle}</h3>
+							<h2>{formTitle}</h2>
+							<p className="paragraph">{formParagraph}</p>
 						</div>
 
 						<div className="divider-small"></div>

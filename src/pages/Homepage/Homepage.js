@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 import { useHomepageContext } from "../../context/HomepageContext";
@@ -15,8 +14,7 @@ const Homepage = () => {
 	/*
 	 * Render
 	 */
-	const { date, title, subtitle, direction, buttonResponse, imageResponses } =
-		homepage;
+	const { miniTitle, title, subtitle, text, button, images } = homepage;
 
 	if (homepage_loading) {
 		return <Preloader></Preloader>;
@@ -34,23 +32,23 @@ const Homepage = () => {
 				<div className="home-sect" style={{ width: "100%", height: "95vh" }}>
 					{/* Background Image */}
 					<OverlayImage
-						imgSrc={imageResponses?.[0]?.fileUrl}
-						imgAlt={imageResponses?.[0]?.name}
+						imgSrc={images?.[0]?.imageUrl}
+						imgAlt={images?.[0]?.imageName}
 						overlayOpacity={0.6}
 					></OverlayImage>
 					{/* Info */}
 					<div className="home-info-container">
 						<div className="home-info">
-							<h4>{date}</h4>
+							<h4>{miniTitle}</h4>
 							<h1>{title}</h1>
 							<h2>{subtitle}</h2>
-							<p>{direction}</p>
+							<p>{text}</p>
 						</div>
 						{/* Button */}
 						<MainButton
 							isLinkBtn
-							linkPath={buttonResponse?.url}
-							btnText={buttonResponse?.title}
+							linkPath={button?.buttonUrl}
+							btnText={button?.buttonTitle}
 							classNames="gold-white-transparent-btn"
 						></MainButton>
 					</div>

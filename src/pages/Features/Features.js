@@ -1,24 +1,23 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 import { PageHeader } from "../../components/PageHeader";
 
 import { CardModel1 } from "../../components/Cards/CardModel1";
 import { MainButton } from "../../components/Buttons";
 
-import AboutUsBG from "../../assets/temp/AboutUsBG.jpg";
-import { features } from "../../utils/temp/features";
+import { FeaturesPage } from "../../utils/temp/entity_constants";
 
 const Features = () => {
+	const { header, subtitle, title, image } = FeaturesPage.pageHeader;
 	return (
 		<Wrapper>
 			<PageHeader
-				imgSrc={AboutUsBG}
-				imgAlt={"Soirées Thematiques Page"}
-				h2Text={"The Best"}
-				h3Text={"Soirées Thématiques!"}
-				pText={"Cocktails & Vins"}
+				imgSrc={image.imageUrl}
+				imgAlt={header}
+				h2Text={header}
+				h3Text={title}
+				pText={subtitle}
 			></PageHeader>
 
 			{/* ================ */}
@@ -27,7 +26,7 @@ const Features = () => {
 			<div className="section">
 				<div className="section-center">
 					{/* Features Map */}
-					{features.map((singleFeature) => {
+					{FeaturesPage.features?.map((singleFeature) => {
 						const { id, title, description } = singleFeature;
 						return (
 							<CardModel1
