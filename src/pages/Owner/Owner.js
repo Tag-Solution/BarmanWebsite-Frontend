@@ -2,17 +2,38 @@ import React from "react";
 import styled from "styled-components";
 
 import { PageHeader } from "../../components/PageHeader";
-
-import { OwnerPage } from "../../utils/temp/entity_constants";
+import { useOwnerContext } from "../../context/OwnerContext";
 
 const Owner = ({ isSectionOnly }) => {
-	const { subtitle, title, paragraph1, name, position, pageHeader, image } =
-		OwnerPage;
+	console.count("[Owner] Times Rendering");
+
+	const { owner, owner_loading, owner_error } = useOwnerContext();
+
+	/*
+	 * Render
+	 */
+	const { subtitle, title, paragraph, name, position, pageHeader, image } =
+		owner;
+
+	if (owner_loading) {
+		return (
+			<div>
+				<h2>Loading el GET</h2>
+			</div>
+		);
+	}
+	if (owner_error) {
+		return (
+			<div>
+				<h2>Error en el GET</h2>
+			</div>
+		);
+	}
 	return (
 		<Wrapper>
 			{!isSectionOnly && (
 				<PageHeader
-					imgSrc={pageHeader.image.imageUrl}
+					imgSrc={pageHeader.image?.imageUrl}
 					imgAlt={pageHeader.header}
 					h2Text={pageHeader.header}
 					h3Text={pageHeader.title}
@@ -26,12 +47,12 @@ const Owner = ({ isSectionOnly }) => {
 			<div className="section-dark">
 				<div className="section-center">
 					<div className="img-container">
-						<img src={image.imageUrl} alt={image.imageName} />
+						<img src={image?.imageUrl} alt={image?.imageName} />
 					</div>
 					<div className="info-container">
 						<h3>{subtitle}</h3>
 						<h2>{title}</h2>
-						<p className="paragraph-white">{paragraph1}</p>
+						<p className="paragraph-white">{paragraph}</p>
 						<div className="signature-container">
 							<h3>{name}</h3>
 							<h2>{position}</h2>

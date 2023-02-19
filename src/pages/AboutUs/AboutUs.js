@@ -7,6 +7,7 @@ import { Owner } from "../../pages";
 
 const AboutUs = ({ isSectionOnly }) => {
 	console.count("[AboutUs] Times Rendering");
+
 	const { aboutus, aboutus_loading, aboutus_error } = useAboutUsContext();
 
 	/*
