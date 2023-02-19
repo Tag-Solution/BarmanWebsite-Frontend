@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useReducer } from "react";
 import axios from "axios";
 
-import reducer from "../reducers/aboutus_reducer";
+import reducer from "../reducers/2_aboutus_reducer";
 
 import {
 	GET_ABOUTUS,

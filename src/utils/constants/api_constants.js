@@ -12,3 +12,7 @@ export const API_ABOUTUS_POST = API_BASE_URL + "/about-page/create";
 // Owner:
 export const API_OWNER_GET = API_BASE_URL + "/owner-page/get";
 export const API_OWNER_POST = API_BASE_URL + "/owner-page/create";
+
+// Features:
+export const API_FEATURES_GET = API_BASE_URL + "/features-page/get";
+export const API_FEATURES_POST = API_BASE_URL + "/features-page/create";

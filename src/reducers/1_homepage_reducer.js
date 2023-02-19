@@ -7,9 +7,11 @@ import {
 const homepage_reducer = (state, action) => {
 	// GET:
 	if (action.type === GET_HOMEPAGE) {
+		console.count("[Homepage Reducer] GET_HOMEPAGE");
 		return { ...state, homepage_loading: true };
 	}
 	if (action.type === GET_HOMEPAGE_SUCCESS) {
+		console.count("[Homepage Reducer] GET_HOMEPAGE_SUCCESS");
 		return { ...state, homepage_loading: false, homepage: action.payload };
 	}
 	if (action.type === GET_HOMEPAGE_ERROR) {

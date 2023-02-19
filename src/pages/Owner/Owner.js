@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { PageHeader } from "../../components/PageHeader";
-import { useOwnerContext } from "../../context/OwnerContext";
+import { useOwnerContext } from "../../context/3_OwnerContext";
 
 const Owner = ({ isSectionOnly }) => {
 	console.count("[Owner] Times Rendering");

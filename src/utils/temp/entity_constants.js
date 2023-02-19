@@ -139,7 +139,6 @@ export const OwnerPage = {
 		imageAwsName: "1675795788214_HomeBG.jpg",
 	},
 };
-
 /*
  * ===============================
  * FeaturesPage

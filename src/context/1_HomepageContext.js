@@ -1,7 +1,8 @@
 import React, { useContext, useEffect, useReducer } from "react";
 import axios from "axios";
 
-import reducer from "../reducers/homepage_reducer";
+import reducer from "../reducers/1_homepage_reducer";
+
 import {
 	GET_HOMEPAGE,
 	GET_HOMEPAGE_SUCCESS,

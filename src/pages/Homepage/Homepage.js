@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { useHomepageContext } from "../../context/HomepageContext";
+import { useHomepageContext } from "../../context/1_HomepageContext";
 
 import { OverlayImage } from "../../components/Overlays";
 

@@ -9,6 +9,11 @@ import { MainButton } from "../../components/Buttons";
 import { FeaturesPage } from "../../utils/temp/entity_constants";
 
 const Features = () => {
+	console.count("[Features] Times Rendering");
+
+	/*
+	 * Render
+	 */
 	const { header, subtitle, title, image } = FeaturesPage.pageHeader;
 	return (
 		<Wrapper>

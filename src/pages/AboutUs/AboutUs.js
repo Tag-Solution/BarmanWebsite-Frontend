@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { PageHeader } from "../../components/PageHeader";
-import { useAboutUsContext } from "../../context/AboutUsContext";
+import { useAboutUsContext } from "../../context/2_AboutUsContext";
 import { Owner } from "../../pages";
 
 const AboutUs = ({ isSectionOnly }) => {

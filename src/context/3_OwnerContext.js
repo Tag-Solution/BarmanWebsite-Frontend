@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useReducer } from "react";
 import axios from "axios";
 
-import reducer from "../reducers/owner_reducer";
+import reducer from "../reducers/3_owner_reducer";
 
 import { GET_OWNER, GET_OWNER_SUCCESS, GET_OWNER_ERROR } from "../actions";
 
