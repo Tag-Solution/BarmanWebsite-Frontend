@@ -2,11 +2,16 @@ import React from "react";
 import styled from "styled-components";
 
 import { PageHeader } from "../../components/PageHeader";
+import { useAboutUsContext } from "../../context/AboutUsContext";
 import { Owner } from "../../pages";
 
-import { AboutUsPage } from "../../utils/temp/entity_constants";
-
 const AboutUs = ({ isSectionOnly }) => {
+	console.count("[AboutUs] Times Rendering");
+	const { aboutus, aboutus_loading, aboutus_error } = useAboutUsContext();
+
+	/*
+	 * Render
+	 */
 	const {
 		subtitle,
 		title,
@@ -16,17 +21,32 @@ const AboutUs = ({ isSectionOnly }) => {
 		ctaInfo,
 		pageHeader,
 		images,
-	} = AboutUsPage;
+	} = aboutus;
+
+	if (aboutus_loading) {
+		return (
+			<div>
+				<h2>Loading el GET</h2>
+			</div>
+		);
+	}
+	if (aboutus_error) {
+		return (
+			<div>
+				<h2>Error en el GET</h2>
+			</div>
+		);
+	}
 	return (
 		<>
 			<Wrapper>
 				{!isSectionOnly && (
 					<PageHeader
-						imgSrc={pageHeader.image.imageUrl}
-						imgAlt={pageHeader.header}
-						h2Text={pageHeader.header}
-						h3Text={pageHeader.title}
-						pText={pageHeader.subtitle}
+						imgSrc={pageHeader?.image?.imageUrl}
+						imgAlt={pageHeader?.header}
+						h2Text={pageHeader?.header}
+						h3Text={pageHeader?.title}
+						pText={pageHeader?.subtitle}
 					></PageHeader>
 				)}
 
@@ -54,10 +74,10 @@ const AboutUs = ({ isSectionOnly }) => {
 						{/* Images */}
 						<div className="img-container">
 							<div className="img img-left">
-								<img src={images[0].imageUrl} alt={images[0].imageName} />
+								<img src={images?.[0]?.imageUrl} alt={images?.[0]?.imageName} />
 							</div>
 							<div className="img img-right">
-								<img src={images[1].imageUrl} alt={images[1].imageName} />
+								<img src={images?.[1]?.imageUrl} alt={images?.[1]?.imageName} />
 							</div>
 						</div>
 					</div>

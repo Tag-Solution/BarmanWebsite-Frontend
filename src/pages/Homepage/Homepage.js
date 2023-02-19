@@ -9,6 +9,7 @@ import { AboutUs, Preloader } from "../../pages";
 import { MainButton } from "../../components/Buttons";
 
 const Homepage = () => {
+	console.count("[Homepage] Times Rendering");
 	const { homepage, homepage_loading, homepage_error } = useHomepageContext();
 
 	/*

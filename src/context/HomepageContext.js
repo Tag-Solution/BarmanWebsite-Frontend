@@ -26,8 +26,8 @@ export const HomepageProvider = ({ children }) => {
 		dispatch({ type: GET_HOMEPAGE });
 		try {
 			const response = await axios.get(API_HOME_GET);
-			const homepage = response.data;
-			dispatch({ type: GET_HOMEPAGE_SUCCESS, payload: homepage });
+			const responseData = response.data;
+			dispatch({ type: GET_HOMEPAGE_SUCCESS, payload: responseData });
 		} catch (error) {
 			dispatch({ type: GET_HOMEPAGE_ERROR });
 		}
